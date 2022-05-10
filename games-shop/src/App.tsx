@@ -1,17 +1,24 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
+import { Box, CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material'
 
 import Home from '@pages/Home'
+import theme from '@styles/Theme'
 
 import './App.css'
+import appStyles from '@styles/AppStyles'
 
 const App: React.FC = () => {
     return (
-        <div className="App">
-            <Routes>
-                <Route path="/" element={<Home />} />
-            </Routes>
-        </div>
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <GlobalStyles styles={appStyles} />
+            <Box>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </Box>
+        </ThemeProvider>
     )
 }
 
