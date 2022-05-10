@@ -1,12 +1,14 @@
 import React from 'react'
-import { Routes } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 
 import './App.css'
 
 const App: React.FC = () => {
     return (
         <div className="App">
-            <Routes />
+            <Routes>
+                <Route path="/" element="" />
+            </Routes>
         </div>
     )
 }
