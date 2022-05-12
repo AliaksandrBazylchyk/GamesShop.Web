@@ -1,4 +1,5 @@
 *.css
 *.svg
+*.scss
 config
 craco.config.js
