@@ -1,5 +1,13 @@
-import theme from '@styles/Theme'
+import React from 'react'
 
-const formWrapperStyles = {}
+export const formWrapperHandlerStyles: React.CSSProperties = {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center',
+}
 
-export default formWrapperStyles
+export const formWrapperLabelStyles: React.CSSProperties = {
+    marginLeft: 50,
+    marginRight: 50,
+}

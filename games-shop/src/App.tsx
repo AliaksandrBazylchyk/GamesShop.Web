@@ -1,6 +1,6 @@
-import React, { ReactFragment, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
-import { Box, CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material'
+import { CssBaseline, GlobalStyles, ThemeProvider } from '@mui/material'
 
 import Home from '@pages/Home'
 import Login from '@pages/Login'

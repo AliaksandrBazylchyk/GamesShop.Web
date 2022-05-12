@@ -1,23 +1,18 @@
 import React from 'react'
 import { Box, Typography } from '@mui/material'
 
+import {
+    formWrapperHandlerStyles,
+    formWrapperLabelStyles,
+} from '@styles/FormWrapperStyles'
+
 const FormWrapper: React.FC<WrapperProps> = ({
     children,
     title,
 }: WrapperProps) => {
     return (
-        <Box
-            style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-            }}
-        >
-            <Typography
-                variant="h4"
-                style={{ marginLeft: 50, marginRight: 50 }}
-            >
+        <Box style={formWrapperHandlerStyles}>
+            <Typography variant="h4" style={formWrapperLabelStyles}>
                 {title}
             </Typography>
             {children}
