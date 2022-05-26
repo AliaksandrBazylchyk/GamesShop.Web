@@ -3,10 +3,12 @@ import { createTheme } from '@mui/material'
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#ffe700',
+            main: '#ffffff',
         },
         background: {
-            default: '#000000',
+            default:
+                'radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%)',
+            paper: 'rgba(0,0,0,0)',
         },
         text: {
             primary: '#ffffff',
@@ -24,7 +26,7 @@ const theme = createTheme({
         MuiTypography: {
             styleOverrides: {
                 h1: {
-                    color: '#ffe700',
+                    color: '#fbe712',
                     fontSize: '18pt',
                 },
                 h6: {

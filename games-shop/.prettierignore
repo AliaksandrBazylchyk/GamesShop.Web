@@ -5,3 +5,5 @@ coverage
 config
 
 craco.config.js
+
+*.scss
