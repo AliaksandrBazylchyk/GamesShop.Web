@@ -1,4 +1,5 @@
 import React from 'react'
+import { useFormik } from 'formik'
 
 import { object, string } from 'yup'
 
@@ -7,7 +8,8 @@ import { Grid } from '@mui/material'
 import FormWrapper from '@components/FormWrapper'
 import FormField from '@components/FormField'
 import FormButton from '@components/FormButton'
-import { useFormik } from 'formik'
+
+import { loginRequest } from '@services/auth.service'
 
 const initialValues = {
     login: '',
@@ -17,7 +19,7 @@ const initialValues = {
 const Login: React.FC = () => {
     const validationSchema = object({
         login: string()
-            .min(6, 'Minimum 6 characters')
+            .min(5, 'Minimum 6 characters')
             .required('Login is required'),
         password: string()
             .min(8, 'Minimum 8 characters')
@@ -26,8 +28,8 @@ const Login: React.FC = () => {
     const formik = useFormik({
         initialValues: { ...initialValues },
         validationSchema,
-        onSubmit: (values) => {
-            alert(JSON.stringify(values, null, 2))
+        onSubmit: async (values) => {
+            loginRequest(values).then((response) => console.log(response.data))
         },
     })
 

@@ -4,8 +4,9 @@ const aliases = (prefix = `src`) => ({
     '@enums': `${prefix}/enums`,
     '@icons': `${prefix}/components/atoms/Icons`,
     '@styles': `${prefix}/styles`,
-    '@types': `${prefix}/types`,
+    '@projectTypes': `${prefix}/types`,
     '@pages': `${prefix}/components/pages`,
+    '@services': `${prefix}/services`,
 })
 
 module.exports = aliases
